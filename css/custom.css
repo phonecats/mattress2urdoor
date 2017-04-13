@@ -1,0 +1,76 @@
+
+
+	 .hero  {
+	  background-color: #E55126;
+
+	}
+	body {
+	  background: #dfe9ca ;
+		position: relative;
+	}
+
+	.mattress-description-front {
+	  word-wrap: break-word;
+
+	}
+
+	.price_field_mattress{
+		font-size: 40px;
+		font-weight: 20px;
+		color: green;
+	}
+
+	.price_field_diffuser{
+		font-size: 40px;
+		font-weight: 20px;
+		color: green;
+	}
+
+	.price_field_oils {
+		font-size: 40px;
+		font-weight: 20px;
+		color: green;
+	}
+
+
+	.carousel-indicators li {
+	  background-color: #999;
+	  background-color: rgba(70,70,70,.25);
+	}
+
+	.carousel-indicators .active {
+	  background-color: #000000;
+	}
+
+	body { 
+		padding-top: 70px; 
+		font-family: 'Roboto', sans-serif;
+
+	}
+
+	.navbar-brand{
+		padding-top: 0px;
+		padding-right: 0px;
+	}
+
+	.navbar-brand a {
+		padding-right: 0px;
+	}
+
+	.navbar-inner {
+	    min-height: 0px;
+	}
+
+	.item-title {
+		font-family: 'Montserrat', sans-serif;
+	}
+	.well_modified {
+		padding-bottom: 0px !important;
+	  padding-top: 0px !important;
+
+	}
+	.well_modified_2 {
+		padding-bottom: 12px !important;
+		padding-top: 5px !important;
+
+	}

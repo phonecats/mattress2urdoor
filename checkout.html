@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mattress2urdoor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://dl.dropbox.com/s/l70aqvw51yr54dg/custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://dl.dropbox.com/s/j0068bqgm5a6hl7/javascript.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">
+        <img alt="Mattress2urDoor" src="https://dl.dropbox.com/s/yw7zydtj604yppl/logo-revisited-3.jpg">
+      </a>
+    
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Mattress</a></li>
+        <li><a href="index.html#aromatherapydiffuser">Aromatherapy Diffuser</a></li>
+        <li><a href="index.html#essentialoil">Essential Oils</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Shopping Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <h1>Checkout</h2>
+  <form action="#">
+  <input type="text" required placeholder="First Name">
+  <input type="text" placeholder="Last Name">
+  <button type="submit">Submit</button>
+  </form>
+
+    <form action="/your-server-side-code" method="POST">
+      <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_test_8opJhT7aXAKl2eD3wNwzj0d4"
+              data-amount="2000"
+              data-name="Furniture Garage, Inc"
+              data-description="2 widgets"
+              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+              data-locale="auto">
+      </script>
+    </form>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+  <div class="Social-Media-icons">
+    <a href="https://www.instagram.com/mattress2urdoor/">
+    <img src="https://dl.dropbox.com/s/6wd6vtx9q4o5gab/1482370558_instagram.png" width="50px" height="50px">
+    </a>
+    <a href="https://www.facebook.com/Mattress2urdoor/">
+    <img src="https://dl.dropbox.com/s/dh6wmvmfsq826kz/1482370546_facebook.png" width="50px" height="50px">
+    </a>
+    <a href="https://twitter.com/mattress2urdoor">
+    <img src="https://dl.dropbox.com/s/8sb799y4ps8nxuq/1482370564_twitter.png" width="50px" height="50px">
+    </a>
+
+
+  </div>
+  <p><a href="mailto:#">info@mattress2urdoor.com</a>  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mattress2urdoor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+  <script src="js/javascript.js"></script>
+
+<!--
+  By Oscar Chavez
+<script src="javascript.js"></script>
+-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <style>
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#myNavbar">
+
+<nav class="navbar navbar-default navbar-fixed-top ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img alt="Mattress2urDoor" src="img/log-revisited-5.jpg">
+      </a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#mattress">Mattress</a></li>
+        <li><a href="#aromatherapydiffuser">Aromatherapy Diffuser</a></li>
+        <li><a href="#essentialoil">Essential Oil</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button type="button" class="btn block-center btn-lg" data-toggle="modal" data-target="#modalShoppingCart"> Shopping Cart </button>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" >
+  <div class="row" >
+    <div class="col-sm-8">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <!-- <li data-target="#myCarousel" data-slide-to="3"></li>  -->
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item active">
+            <img src="img/myGelMattress760x400.jpg">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/mygelmattress_layers_760x400.jpg">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/myGelMattress_trial_760x400.jpg">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+<!--
+          <div class="item">
+            <iframe width="760" height="460" src="https://www.youtube.com/embed/HDFDwx9f-DM" frameborder="0" allowfullscreen></iframe></iframe>
+          </div>
+-->
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-sm-4 item-description-box ">
+      <div class="mattress-description-front text-center">
+        <h2 class=" item-title" id="mattress" >The MyGel Hybrid Mattress</h2>
+        <p style="padding-left: 50px; padding-right: 50px;">Experience the modern fusion of cool gel technology, high density memory foam and innerspring coils.</p>
+        <p>Unlock the science of sleep!</p>
+      </div>
+      <div class="mattress_dimensions" style="margin-bottom: 10px">
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="btn-group btn-group-justified" role="group" >
+            <div class="btn-group" role "group">
+            <button id="button-twin" type="button"  class="btn btn-default center-block">TWIN</button>
+          </div>
+        <div class="btn-group" role "group">
+        <button id="button-full" type="button" class="btn btn-default">FULL</button>
+      </div>
+           <div class="btn-group" role "group">
+
+      <button id="button-queen" type="button" class="btn btn-default">QUEEN</button>
+    </div>
+    </div>
+    <div class="btn-group btn-group-justified" role="group">
+ 
+    <div class="btn-group" role "group">
+
+    <button id="button-king" type="button" class="btn btn-default" autofocus="autofocus" >KING</button>
+  </div>
+  <div class="btn-group" role "group">
+
+  <button id="button-calking" type="button" class="btn btn-default">CAL KING</button>
+</div>
+
+
+ 
+
+</div>
+     
+</div>
+</div><!---end of row ------>
+  <div class="row" style="padding-top: 10px">
+    <div class="col-xs-6 col-xs-offset-6">
+      Quantity:
+                <input type="text" id="input_mattress_quantity" placeholder="Quantity" value="1" size="1" >
+    </div>
+    </div><!-- end of row -->
+
+<div class="row " style="padding-top: 12px">
+  <div class="col-xs-6">
+    <div class="price_field_mattress text-center">
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <div class="addtocart_button">
+      <button id="button_addtocart_mattress" type="button" class="btn-lg btn-default">ADD TO CART</button>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="padding-top: 10px;">
+<a href="#"  style="background-color: darkgray; color: white;" class="btn btn-default btn-block" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/HDFDwx9f-DM" >
+
+  Watch Our Video    <span class="glyphicon glyphicon-film"> </span></a>
+
+
+
+</div>
+</div>
+</div>
+
+<!--
+  <div class="col-sm-4">
+    <div class="well">
+      <p>Some text..</p>
+    </div>
+    <div class="well">
+       <p>Upcoming Events..</p>
+    </div>
+    <div class="well">
+       <p>Visit Our Blog</p>
+    </div>
+</div>
+-->
+
+
+
+<div class="container text-center">
+  <h3>Information</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="img/mygel_mattress_layers.png" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+
+    <div class="col-sm-3">
+      <div class="well well_modified">
+        <h4>Mattress Design</h4>
+        <p>Our designers fused the best elements of cool gel, memory foam and innerspring together to create mattress perfection. And zipped it into a luxurious knit cover that can be removed and washed.</p>
+      </div>
+    </div>
+
+
+    <div class="col-sm-3">
+      <img src="img/mygel_mattress_air_delivery.jpg" class="img-responsive" style="width:100%" alt="Image">
+
+    </div>
+
+    <div class="col-sm-3">
+      <div class="well well_modified_2">
+        <h4>Delivered to your door!</h4>
+        <div style="padding-top: 17px">
+          <p>Conveniently delivered to your door. Ships within 3-5 business days. Avoid the pushy mattress salesperson!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+<br>
+
+<!-- Commented out incase we need it in the future.
+<div class="container text-center">    
+<h3>Our Partners</h3>
+<br>
+<div class="row">
+<div class="col-sm-2">
+<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+<p>Partner 1</p>
+</div>
+<div class="col-sm-2">
+<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+<p>Partner 2</p>
+</div>
+<div class="col-sm-2">
+<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+<p>Partner 3</p>
+</div>
+<div class="col-sm-2">
+<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+<p>Partner 4</p>
+</div>
+<div class="col-sm-2">
+<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+<p>Partner 5</p>
+</div>
+<div class="col-sm-2">
+<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+<p>Partner 6</p>
+</div>
+</div>
+</div><br>
+
+-->
+
+
+<!--The second item on the page. The Diffuser code begins here.-->
+
+<div class="container ">
+  <h3 id="aromatherapydiffuser" style="padding-left: 20px">Aromamist Diffuser</h3>
+</div> <br>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel2" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item active">
+            <img src="img/chrome_diffuser_760x460.jpg">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/aromamist_diffuser_2_760x460.jpg">
+            <div class="carousel-caption">
+              <h3><h3>
+                <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="mattress-description-front">
+        <h3 class="text-center">SpaRoom Aromamist Chrome Ultrasonic Diffuser</h3>
+        <p >Our signature diffuser in chrome, featuring all of the best elements including style, lighting and mist. No heat or chemicals needed. Simply add less than a cup of water for 3 to 6 hours of bliss. The AromaMist® has been selected
+          by some of the most celebrated spas in America. </p>
+        <ul>
+          <li>Automatic Safety :Yes</li>
+          <li>Continuous Operation: 5-6 hours</li>
+          <li>Intermittent Operation: 8-10 hours</li>
+          <li>Light Mode: Solid or rotating color and off</li>
+          <li>Power: AC adapter included</li>
+          <li>UL approved Recommended Drops of Oil: 3 to 5 </li>
+          <li>Single Unit Dimensions: 6.25"D x 3"H Single Unit Weight: 0.8 lbs</li>
+          <li>Suggested Room Size: 151-200 sq ft </li>
+          <li>Water Capacity: 115 mL (4.00 fl oz) </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-6" style="padding-bottom:5px">
+          Quantity
+          <input type="text" id="input_diffuser_quantity" placeholder="Quantity" value="1" size="1" >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+      <div class="price_field_diffuser text-center">
+        $60
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="addtocart_button">
+        <button id="button_addtocart_diffuser" type="button" class="btn-lg btn-default">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<hr>
+
+</div><br>
+
+
+
+
+<!--End of the diffuser code-->
+<!--Code for the oils begins here-->
+<div id="essentialoil" class="container">
+  <h3 style="padding-left: 20px">Essential Oil</h3>
+</div> <br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item active">
+            <img src="img/essentialoil_760x460.jpg">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="col-sm-4">
+      <div class="mattress-description-front">
+        <h2 class="text-center">Rejuven8&trade;</h2>
+        <p>Rejuven8&trade; is our signature blend of the finest essential oils to promote a healthy sleep environment. This essential oil blend can be diffused aromatically in the bedroom to create the perfect environment for a healthy 8 hours
+          of sleep. The blend includes the following 4 essential oils:</p>
+        
+        <dl>
+          <dt>Lavender:</dt>
+          <dd> A popular essential oil loved for its calming and soothing fragrance. When diffused, it adds a clean and fresh scent to any room.</dd>
+
+          <dt>Bergamot:</dt>
+          <dd> An essential oil that has a light, citrusy scent. It is rich in linalool and linalyl acetate, compounds that have well known relaxation properties. </dd>
+          <dt>Marjoram:</dt>
+          <dd>An aromatic herb in the mint family, marjoram is a key oil used by massage therapists. It has warming properties that can soothe sore muscles.</dd>
+          <dt>Sandalwood:</dt>
+          <dd>Sandalwood has a rich, sweet, warm and woodsy aroma that is sensual and romantic. Used traditionally for meditation, sandalwood is uplifting and relaxing and is valued in skin care and moisturizing properties. </dd>
+        </dl>
+      
+
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-6"  style="padding-top: 5px; padding-bottom: 5px">
+            Quantity:
+             <input type="text" id="input_oil_quantity" placeholder="Quantity" value="1" size="1" >
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+        <div class="price_field_oils text-center">
+          $20
+        </div>
+          </div>
+          <div class="col-xs-6">
+        <div class="addtocart_button">
+          <button id="button_addtocart_oil" type="button" class="btn-lg btn-default">ADD TO CART</button>
+        </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+<footer class="container-fluid text-center">
+  <div class="Social-Media-icons">
+    <a href="https://www.instagram.com/mattress2urdoor/">
+      <img src="img/1482370558_instagram.png" width="50px" height="50px">
+    </a>
+    <a href="https://www.facebook.com/Mattress2urdoor/">
+      <img src="img/1482370546_facebook.png" width="50px" height="50px">
+    </a>
+    <a href="https://twitter.com/mattress2urdoor">
+      <img src="img/1482370564_twitter.png" width="50px" height="50px">
+    </a>
+
+
+  </div>
+  <p><a href="mailto:#">info@mattress2urdoor.com</a> </p>
+
+</footer>
+</body>
+
+<!--Modals-------------------------------------------------------------------->
+
+<!--Shopping Cart Modal -->
+<!-- Modal -->
+<div class="modal fade" id="modalShoppingCart" tabindex="-1" role="dialog" aria-labelledby="shoppingCartModal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Shopping Cart</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+
+              <div class="col-md-12" >
+      <div id="htmlShoppingCart"> 
+      <div class="row">
+        <div class="col-xs-3" id="htmlItemNameSC">
+          Item Name
+        </div>
+        <div class="col-xs-3" id="htmlItemQuantitySC">
+          Item Quantity
+        </div>
+        <div class="col-xs-3" id="htmlItemPriceSC">
+          Item Price
+        </div>
+        <div class="col-xs-3" id="htmlItemRemove">
+          <p > Remove </p>
+        </div>
+        
+        </div> <!--End of inner div row -->
+      </div>
+    </div>
+
+
+        </div>
+        <div class="row" style="padding-top: 20px">
+          <div class="col-md-6">
+            <h5> Total Price: </h5>
+          </div>
+          <div class="col-md-6">
+            <p id="htmlTotalPrice">0<p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="customButton">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End of shopping cart modal ---------------------------------------->
+
+
+
+
+<!-- Youtube video of mattress code -->
+
+<div class="row" style="padding-top: 10px;">
+<a href="#"  style="background-color: darkgray; color: white;" class="btn btn-default btn-block" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/HDFDwx9f-DM" >
+
+  Watch Our Video    <span class="glyphicon glyphicon-film"> </span></a>
+
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <div>
+          <iframe width="100%" height="350" src=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- End of youtube video code, autoPlayYouTubeModal JS Function goes with this code -->
+
+<!--End of Modals ------------------------------------------------------------>
+
+</html>
